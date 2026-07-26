@@ -98,8 +98,33 @@ const initialProfile: UserProfile = {
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [products, setProducts] = useState<Product[]>(() => {
-    const cached = localStorage.getItem("blousia_products");
-    return cached ? JSON.parse(cached) : PRODUCTS;
+    const cached = localStorage.getItem("blousia_products_v2") || localStorage.getItem("blousia_products");
+    if (!cached) {
+      localStorage.setItem("blousia_products_v2", JSON.stringify(PRODUCTS));
+      return PRODUCTS;
+    }
+    try {
+      const parsed: Product[] = JSON.parse(cached);
+      // Ensure all static catalog products (including new AI Fashion Agent items) are present and synced
+      const merged = PRODUCTS.map((staticProd) => {
+        const cachedProd = parsed.find((cp) => cp.id === staticProd.id);
+        if (cachedProd) {
+          return {
+            ...staticProd,
+            reviews: cachedProd.reviews?.length ? cachedProd.reviews : staticProd.reviews,
+            ratings: cachedProd.reviews?.length ? cachedProd.ratings : staticProd.ratings,
+          };
+        }
+        return staticProd;
+      });
+      // Preserve any custom products added by admin/staff during runtime
+      const customAdded = parsed.filter((cp) => !PRODUCTS.some((sp) => sp.id === cp.id));
+      const finalProducts = [...merged, ...customAdded];
+      localStorage.setItem("blousia_products_v2", JSON.stringify(finalProducts));
+      return finalProducts;
+    } catch (e) {
+      return PRODUCTS;
+    }
   });
 
   const [cart, setCart] = useState<CartItem[]>(() => {
@@ -294,7 +319,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   // Sync to LocalStorage
   useEffect(() => {
-    localStorage.setItem("blousia_products", JSON.stringify(products));
+    localStorage.setItem("blousia_products_v2", JSON.stringify(products));
   }, [products]);
 
   useEffect(() => {
