@@ -1,0 +1,6 @@
+{
+  "name": "Blousia",
+  "description": "Blousia® - Premium women's blouse boutique. Designed to drape confidence. Indian premium online shopping destination for luxury designer, bridal, silk, and contemporary blouses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

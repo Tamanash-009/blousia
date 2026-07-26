@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Editorial Aesthetic Background & Text Overrides */
+  --color-slate-50: #FDFCFB;
+  --color-slate-100: #F7F5F2;
+  --color-slate-200: #EFECE8;
+  --color-slate-300: #E5E1DB;
+  --color-slate-400: #DED9D2;
+  
+  --color-slate-950: #121110;
+  --color-slate-900: #1C1A19;
+  --color-slate-800: #292625;
+
+  --color-gray-50: #FAF7F2;
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #737373;
+  --color-gray-600: #525252;
+  --color-gray-700: #404040;
+  --color-gray-800: #262626;
+  --color-gray-900: #171717;
+  --color-gray-950: #0a0a0a;
+
+  --color-gold-50: #FAF7F2;
+  --color-gold-100: #F4ECE1;
+  --color-gold-200: #E5D9C4;
+  --color-gold-300: #D0BE9F;
+  --color-gold-400: #B79F77;
+  --color-gold-500: #A68A56;
+  --color-gold-600: #8C7142;
+  --color-gold-700: #705831;
+  --color-gold-800: #544123;
+  --color-gold-900: #3D2F18;
+
+  --color-rose-luxury: #1A1A1A;
+}
+
+/* Elegant scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(173, 123, 43, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(173, 123, 43, 0.4);
+}
+
+/* Dynamic custom typography helper */
+.luxury-title {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+/* Animated shine for loaders */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, rgba(226, 232, 240, 0.5) 25%, rgba(241, 245, 249, 0.8) 37%, rgba(226, 232, 240, 0.5) 63%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.dark .shimmer {
+  background: linear-gradient(90deg, rgba(30, 41, 59, 0.5) 25%, rgba(51, 65, 85, 0.8) 37%, rgba(30, 41, slate-800, 0.5) 63%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
