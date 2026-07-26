@@ -10,6 +10,7 @@ import {
   CheckCircle, Scissors, FileText, Globe, Truck, Percent, ShieldAlert, Key, MessageSquare, Eye
 } from "lucide-react";
 import { Product, Order, Coupon, CustomDesignRequest } from "../types";
+import { AIFashionCommerceAgent } from "./AIFashionCommerceAgent";
 
 export const AdminPanel: React.FC = () => {
   const { 
@@ -18,7 +19,7 @@ export const AdminPanel: React.FC = () => {
     moderateReview, deleteReview, socialLinks, setSocialLinks
   } = useApp();
 
-  const [adminTab, setAdminTab] = useState<"dashboard" | "products" | "orders" | "customs" | "coupons" | "tax-shipping" | "seo" | "audit" | "reviews" | "google-profile">("dashboard");
+  const [adminTab, setAdminTab] = useState<"dashboard" | "products" | "orders" | "customs" | "coupons" | "tax-shipping" | "seo" | "audit" | "reviews" | "google-profile" | "ai-agent">("dashboard");
   const [stockEditId, setStockEditId] = useState<string | null>(null);
   const [tempStockValue, setTempStockValue] = useState(0);
 
@@ -234,6 +235,13 @@ export const AdminPanel: React.FC = () => {
             className={`px-3 py-2 transition-all ${adminTab === "google-profile" ? "bg-white text-gold-600 shadow-xs dark:bg-slate-800 dark:text-gold-400" : "text-gray-400 hover:text-gray-800"}`}
           >
             Google Profile Setup
+          </button>
+          <button
+            onClick={() => setAdminTab("ai-agent")}
+            className={`px-3 py-2 transition-all flex items-center gap-1 font-bold ${adminTab === "ai-agent" ? "bg-crimson-600 text-white shadow-xs dark:bg-crimson-600 dark:text-white" : "text-crimson-500 hover:text-crimson-600 bg-crimson-500/10"}`}
+          >
+            <Sparkles size={12} className="animate-spin" style={{ animationDuration: '3s' }} />
+            AI Commerce Studio
           </button>
         </div>
       </div>
@@ -1171,6 +1179,13 @@ export const AdminPanel: React.FC = () => {
               {isSavedGbp ? "✓ Integration Live & Saved" : "Save Google Profile Connection"}
             </button>
           </div>
+        </div>
+      )}
+
+      {/* TAB 11: Autonomous AI Commerce Agent Studio */}
+      {adminTab === "ai-agent" && (
+        <div className="mt-8 animate-fadeIn">
+          <AIFashionCommerceAgent />
         </div>
       )}
 

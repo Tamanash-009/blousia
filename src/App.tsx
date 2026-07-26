@@ -18,6 +18,7 @@ import { AdminPanel } from "./components/AdminPanel";
 import { AIChatBot } from "./components/AIChatBot";
 import { FashionBlog } from "./components/FashionBlog";
 import { StyleAdvisor } from "./components/StyleAdvisor";
+import { AIFashionCommerceAgent } from "./components/AIFashionCommerceAgent";
 import { CookieBanner } from "./components/CookieBanner";
 import { SpeedDialSupport } from "./components/SpeedDialSupport";
 import { GoogleBusinessReviews } from "./components/GoogleBusinessReviews";
@@ -502,6 +503,9 @@ const MainContent: React.FC = () => {
 
       case "style-advisor":
         return <StyleAdvisor />;
+
+      case "ai-commerce-agent":
+        return <AIFashionCommerceAgent />;
 
       // Fully customized production-ready Legal documents
       case "legal-privacy":

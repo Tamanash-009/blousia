@@ -104,6 +104,7 @@ export const Header: React.FC = () => {
     { id: "home", label: "Home", icon: Crown },
     { id: "catalog", label: "Boutique Catalog", icon: ShoppingBag },
     { id: "style-advisor", label: "AI Advisor", icon: Sparkles },
+    { id: "ai-commerce-agent", label: "AI Commerce Studio", icon: Sparkles },
     { id: "blog", label: "Fashion Blog", icon: BookOpen },
   ];
 
@@ -111,6 +112,7 @@ export const Header: React.FC = () => {
     { id: "home", label: "Atelier Home", icon: Crown },
     { id: "catalog", label: "Boutique Catalog", icon: ShoppingBag },
     { id: "style-advisor", label: "AI Fashion Stylist", icon: Sparkles },
+    { id: "ai-commerce-agent", label: "AI Commerce Agent Studio", icon: Sparkles },
     { id: "blog", label: "Latest Fashion Blog", icon: BookOpen },
     { id: "wishlist", label: "Saved Creations", icon: Heart },
     { id: "cart", label: "Shopping Bag", icon: ShoppingBag },

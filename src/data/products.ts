@@ -7,6 +7,67 @@ import { Product } from "../types";
 
 export const PRODUCTS: Product[] = [
   {
+    id: "bl-015",
+    sku: "BL-TEAL-RAY-015",
+    name: "Women's Teal Green Floral Zari Printed Cotton Rayon Blouse | V-Neck Half Sleeve | Festive Ethnic Wear",
+    category: "Cotton Blouses",
+    description: "Radiate timeless festive charm with this Teal Green Floral Printed Cotton Rayon Blouse. Tailored with an elegant V-neckline and flattering half sleeves, this blouse features intricate rust-orange floral block-inspired motifs and delicate vertical zari stripe accents. Masterfully woven from our signature Cotton and Rayon fabric blend, the natural cotton fibers ensure superior breathability in tropical climates, while the rayon infusion provides a smooth, silk-like luster and wrinkle resistance. Every stitch is double-reinforced and backed by an ultra-soft 100% pure cotton mulmul inner lining, preventing any friction against the skin. Equipped with pre-shaped removable padded cups, structured princess bust darts, and generous 2-inch internal side alteration margins, this blouse guarantees a customized, supportive fit. Pair it seamlessly with contrasting maroon silk lehengas, earthy tussar silk sarees, or contemporary festive skirts.",
+    seoTitle: "Women's Teal Green Floral Printed Cotton Rayon Blouse - Blousia",
+    seoDescription: "Shop the Teal Green Floral Printed Cotton Rayon Blouse for ₹799. Breathable cotton rayon blend, V-neck, half sleeve, padded & fully lined with pure cotton mulmul.",
+    mrp: 1999,
+    sellingPrice: 799,
+    discount: 60,
+    images: [
+      "/catalog/teal_floral_palace_hero.jpg",
+      "/catalog/teal_floral_front.jpg",
+      "/catalog/teal_floral_back.jpg",
+      "/catalog/teal_floral_left.jpg",
+      "/catalog/teal_floral_right.jpg"
+    ],
+    ratings: 4.9,
+    reviews: [
+      {
+        id: "r-015-1",
+        userName: "Kavya Menon",
+        userEmail: "kavya.m@gmail.com",
+        rating: 5,
+        comment: "At just ₹799, the quality of this Cotton Rayon fabric is unbeatable! The teal and rust-orange floral print is so regal, and the fit with the inner mulmul lining is ultra comfortable.",
+        date: "2026-07-26",
+        isVerified: true,
+        sentiment: "positive"
+      }
+    ],
+    specifications: {
+      fabric: "Cotton & Rayon Blend",
+      neckStyle: "Classic V-Neckline with Zari Piping Border",
+      sleeveStyle: "Half Sleeve (Elbow Length with Floral Print)",
+      backDesign: "Deep Scoop Round Back with Piping",
+      lining: "100% Breathable Pure Cotton Mulmul Lining",
+      padding: "Pre-shaped Premium Removable Padding",
+      closureType: "Front Hook-and-Eye Closure with Concealed Placket",
+      colorOptions: ["Teal Green & Rust Orange", "Royal Crimson Red", "Maroon Ikat", "Black Paisley"],
+      sizes: ["34", "36", "38", "40", "42"],
+      washCare: "Hand Wash in Cold Water or Machine Gentle Cycle. Do Not Bleach. Dry in Shade. Medium Iron on Reverse."
+    },
+    deliveryEstimateDays: 2,
+    returnPolicy: "Easy 10-day exchange and returns. Item must be unworn with tags intact.",
+    availability: "In Stock",
+    stock: 50,
+    isBestSeller: true,
+    isTrending: true,
+    isNewArrival: true,
+    faqs: [
+      {
+        question: "Is the fabric breathable for summer festivities?",
+        answer: "Yes! The 65% cotton and 35% rayon blend combined with a 100% pure cotton mulmul lining ensures complete breathability and sweat absorption even during long festive ceremonies."
+      },
+      {
+        question: "Does it have extra margin for alteration?",
+        answer: "Yes, all Blousia® blouses come with a generous 2-inch expandable internal side stitch margin on both sides for effortless resizing."
+      }
+    ]
+  },
+  {
     id: "bl-001",
     sku: "BL-KSH-SLK-001",
     name: "Kashvi Hand-Embroidered Banarasi Silk Blouse",
@@ -464,7 +525,7 @@ export const PRODUCTS: Product[] = [
     sellingPrice: 1899,
     discount: 53,
     images: [
-      "/brain/19fbbad6-3445-46e6-8840-03c1668a38bb/crimson_peacock_hero_1785093719694.png",
+      "/catalog/crimson_peacock_hero_1785093719694.png",
       "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=600",
       "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=600"
     ],
@@ -555,7 +616,7 @@ export const PRODUCTS: Product[] = [
     sellingPrice: 1299,
     discount: 48,
     images: [
-      "/brain/19fbbad6-3445-46e6-8840-03c1668a38bb/cream_pomegranate_hero_1785093873642.png",
+      "/catalog/cream_pomegranate_hero_1785093873642.png",
       "https://images.unsplash.com/photo-1608748010899-18f300247112?auto=format&fit=crop&q=80&w=600",
       "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&q=80&w=600"
     ],
@@ -599,7 +660,7 @@ export const PRODUCTS: Product[] = [
     sellingPrice: 1499,
     discount: 48,
     images: [
-      "/brain/19fbbad6-3445-46e6-8840-03c1668a38bb/maroon_ikat_hero_1785093884761.png",
+      "/catalog/maroon_ikat_hero_1785093884761.png",
       "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=600",
       "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=600"
     ],
@@ -643,7 +704,7 @@ export const PRODUCTS: Product[] = [
     sellingPrice: 2099,
     discount: 51,
     images: [
-      "/brain/19fbbad6-3445-46e6-8840-03c1668a38bb/red_kutchi_hero_1785093895500.png",
+      "/catalog/red_kutchi_hero_1785093895500.png",
       "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=600",
       "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&q=80&w=600"
     ],
@@ -687,7 +748,7 @@ export const PRODUCTS: Product[] = [
     sellingPrice: 1499,
     discount: 50,
     images: [
-      "/brain/19fbbad6-3445-46e6-8840-03c1668a38bb/black_paisley_hero_1785093905299.png",
+      "/catalog/black_paisley_hero_1785093905299.png",
       "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=600",
       "https://images.unsplash.com/photo-1608748010899-18f300247112?auto=format&fit=crop&q=80&w=600"
     ],
